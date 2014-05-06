@@ -99,3 +99,7 @@
 			</div> <!-- #et-top-navigation -->
 		</div> <!-- .container -->
 	</header> <!-- #main-header -->
+	
+<script type="text/javascript">
+var templateUrl = '<?= get_bloginfo("template_url"); ?>';
+</script>
