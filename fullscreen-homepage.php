@@ -33,6 +33,7 @@
 	<script src="<?php echo esc_url( $template_directory_uri . '/js/html5.js"' ); ?>" type="text/javascript"></script>
 	<![endif]-->
 
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/fullscreen-style.css" media="all" />
 	<script type="text/javascript">
 		document.documentElement.className = 'js';
 	</script>
@@ -42,6 +43,7 @@
 <body <?php body_class(); ?>>
 
 <header>
+	<div class="container">
 		<?php
 			$logo = ( $user_logo = et_get_option( 'divi_logo' ) ) && '' != $user_logo
 				? $user_logo
@@ -76,8 +78,16 @@
 			endif;
 		?>
 		</nav>
+		
+	<div class="clear"></div>
+	</div>
 </header>
 	
+	<div class="pagebody"></div>
+	
+<footer>
+Cardboard Carpentry&trade; is the process of converting a sheet of cardboard into a three-dimensional object that's as creative as you want it to be!
+</footer>
 	<?php wp_footer(); ?>
 </body>
 </html>
