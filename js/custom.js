@@ -1,4 +1,6 @@
 (function($){
+	$('.et_pb_slider').append('<img src="'+ templateUrl +'/images/slide_arrow_down.gif" alt="" class="slider_arrow_down" />');
+
 	$.et_pb_simple_slider = function(el, options) {
 		var settings = $.extend( {
 			slide         			: '.et-slide',				 	// slide class
@@ -746,3 +748,4 @@
 		} );
 	} );
 })(jQuery)
+
