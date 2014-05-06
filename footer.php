@@ -9,6 +9,7 @@
 				</center>
 			</div>	<!-- .container -->
 		</div>
+		<div class="clear"></div>
 	</footer> <!-- #main-footer -->
 
 
