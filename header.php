@@ -48,9 +48,15 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 		  }
 		  img#plax-logo {
 			position: relative;
-			top: -10px;
-			left: 0px;
+			top: 5px;
+			left: 15px;
 			z-index: 3;
+		  }
+		  img#plax-sphere-1 {
+			position: absolute;
+			z-index: 1;
+			top: 30px;
+			left: 10px;
 		  }
 		</style>
 		<script type="text/javascript">
@@ -76,7 +82,12 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 						: $template_directory_uri . '/images/logo.png';
 				?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" <?php if( is_page(FULLSCREEN_HOMEPAGE) ){ echo 'data-xrange="20" data-yrange="20" id="plax-logo"';} else { echo 'id="logo"';}?>/>
+					<?php if( is_page(FULLSCREEN_HOMEPAGE) ): ?>
+						<img src="<?php echo $template_directory_uri?>/images/pc_logo1.png" width="241" height="153" data-xrange="40" data-yrange="40" id="plax-sphere-1"/>
+						<img src="<?php echo $template_directory_uri?>/images/pc_logo2.png" width="241" height="153" data-xrange="20" data-yrange="20" id="plax-logo"/>
+					<?php else:?>
+					<img id="logo" src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+					<?php endif;?>
 					</a>
 					<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 					<div id="et-top-navigation">
