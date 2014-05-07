@@ -67,6 +67,10 @@ footer{
 	#plax-logo{
 		width: 200px; }
 	}
+@media screen and (max-width: 600px){
+	html #wpadminbar{
+		top: -46px;}
+	}
 @media screen and (max-width: 480px){
 	#plax-logo{
 		width: 110px; }
