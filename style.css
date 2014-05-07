@@ -69,25 +69,35 @@ nav #top-menu li:last-child{
 	display: inline-block;
 	list-style: none; }
 .social-icons ul li a{ 
-	color: #f5f5f5; 
-	display: table-cell;
-	font-size: 20px;
-	background: #d6d6d6; 
-	width: 32px;
-	height: 32px;
-	text-align: center;
-	vertical-align: middle; }
-.social-icons ul li a:hover{
-	color: #fff; }
+	display: inline-block;
+	width: 31px;
+	height: 31px;
+	background: url(images/sprite-icons.png);}
+.social-icons ul li a.icon-fb{ background-position: 0 0; }
+.social-icons ul li a.icon-tw{ background-position: -32px 0; }
+.social-icons ul li a.icon-yt{ background-position: -64px 0; }
+.social-icons ul li a.icon-ig{ background-position: -96px 0; }
+.social-icons ul li a.icon-fb:hover{ background-position: 0 -32px;}
+.social-icons ul li a.icon-tw:hover{ background-position: -32px -32px;}
+.social-icons ul li a.icon-yt:hover{ background-position: -64px -32px;}
+.social-icons ul li a.icon-ig:hover{ background-position: -96px -32px;}
 #main-footer .social-icons{
 	float: left;
 	background: none;
 	padding: 0;
 	margin: 0;}
 #main-footer .social-icons li a{
-	width: 50px;
-	height: 50px;
-	font-size: 30px;}
+	width: 49px;
+	height: 49px;
+	background: url(images/sprite-icons-big.png) no-repeat 0 0;}
+#main-footer .social-icons li a.icon-fb{background-position: 0 0; }
+#main-footer .social-icons li a.icon-tw{background-position: -50px 0; }
+#main-footer .social-icons li a.icon-yt{background-position: -100px 0; }
+#main-footer .social-icons li a.icon-ig{background-position: -150px 0; }
+#main-footer .social-icons li a.icon-fb:hover{background-position: 0 -50px; }
+#main-footer .social-icons li a.icon-tw:hover{background-position: -50px -50px; }
+#main-footer .social-icons li a.icon-yt:hover{background-position: -100px -50px; }
+#main-footer .social-icons li a.icon-ig:hover{background-position: -150px -50px; }
 #copyright{
 	padding: 5px 0; }
 #copyright, #copyright *{
