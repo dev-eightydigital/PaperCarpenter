@@ -32,39 +32,6 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 	
 	<?php if( is_page(FULLSCREEN_HOMEPAGE) ): //page id of homepage set for the fullscreen background ?>
 		<link rel="stylesheet" href="<?= $template_directory_uri?>/fullscreen-style.css" media="all" />
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-		<?php $plax_path = $template_directory_uri.'/js/plax/plax.js';?>
-		<?php echo '<script type="text/javascript" src="'. $plax_path .'"></script>'; ?>
-		<style type="text/css">
-		  * {
-			margin: 0px;
-			padding: 0px;
-		  }
-		  body {
-			position: relative;
-		  }
-		  div#shell{
-			z-index: 1;
-		  }
-		  img#plax-logo {
-			position: relative;
-			top: 5px;
-			left: 15px;
-			z-index: 3;
-		  }
-		  img#plax-sphere-1 {
-			position: absolute;
-			z-index: 1;
-			top: 30px;
-			left: 10px;
-		  }
-		</style>
-		<script type="text/javascript">
-		  $(document).ready(function () {
-			$('#shell img').plaxify()
-			$.plax.enable()
-		  })
-		</script>
 	<?php endif;?>
 	<script type="text/javascript">
 		document.documentElement.className = 'js';
@@ -82,12 +49,7 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 						: $template_directory_uri . '/images/logo.png';
 				?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<?php if( is_page(FULLSCREEN_HOMEPAGE) ): ?>
-						<img src="<?php echo $template_directory_uri?>/images/pc_logo1.png" width="241" height="153" data-xrange="40" data-yrange="40" id="plax-sphere-1"/>
-						<img src="<?php echo $template_directory_uri?>/images/pc_logo2.png" width="241" height="153" data-xrange="20" data-yrange="20" id="plax-logo"/>
-					<?php else:?>
 					<img id="logo" src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
-					<?php endif;?>
 					</a>
 					<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 					<div id="et-top-navigation">
