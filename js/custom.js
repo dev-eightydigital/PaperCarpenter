@@ -1,5 +1,6 @@
 (function($){
 	$('.et_pb_slider').append('<img src="'+ templateUrl +'/images/slide_arrow_down.gif" alt="" class="slider_arrow_down" />');
+	
 
 	$.et_pb_simple_slider = function(el, options) {
 		var settings = $.extend( {
@@ -298,7 +299,7 @@
 			if ( $form.hasClass( 'et-hidden' ) ) {
 				$form.css( { 'display' : 'block', 'opacity' : 0 } ).animate( { opacity : 1 }, 500 );
 			} else {
-				$form.animate( { opacity : 0 }, 500 );
+				$form.css( { 'display' : 'none' } ).animate( { opacity : 0 }, 500 );
 			}
 
 			$form.toggleClass( 'et-hidden' );
