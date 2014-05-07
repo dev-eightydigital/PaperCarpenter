@@ -42,6 +42,15 @@ Author URI: http://www.eightydigital.com
 		width: 210px !important;
 		margin-right: 20px !important; }
 	}
+@media screen and (max-width: 980px){
+	#fullscreen-home #et_mobile_nav_menu{
+		position: absolute;
+		top: 0;
+		right: 10%; }
+		
+	.et_pb_main_blurb_image img{
+		height: 280px !important; }
+	}
 
 nav #top-menu li{
 	background: url(images/separator.gif) no-repeat center right; }
@@ -94,10 +103,7 @@ nav #top-menu li:last-child{
 	position: absolute;
 	left: 50%;}
 	
-@media screen and (max-width: 980px){
-	.et_pb_main_blurb_image img{
-		height: 280px !important; }
-	}
+
 /*------------------------------------------------*/
 /*-----------------[RESET]------------------------*/
 /*------------------------------------------------*/
@@ -242,6 +248,7 @@ table.shop_table { margin-bottom: 30px !important; }
 
 
 .container { text-align: left; margin: 0 auto; width: 1200px; position: relative; }
+	@media screen and (max-width: 1250px){ .container{ width: 1100px; } }
 	body.admin-bar #main-header { top: 32px; }
 	body.et-wp-pre-3_8.admin-bar #main-header { top: 28px; }
 	#main-header { line-height: 23px; font-weight: 500; top: 0; background-color: #fff; width: 100%; z-index: 99999; padding: 18px 0 0 0; min-height: 43px; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
