@@ -1,5 +1,10 @@
 (function($){
 	$('.et_pb_slider').append('<img src="'+ templateUrl +'/images/slide_arrow_down.gif" alt="" class="slider_arrow_down" />');
+	$(window).resize(function (){
+		if($(window).width() < 950){
+			$('#fsi-full-bg img:first-child').attr('src', templateUrl+'/images/small_res_img.jpg');
+			}
+		});
 	
 
 	$.et_pb_simple_slider = function(el, options) {
