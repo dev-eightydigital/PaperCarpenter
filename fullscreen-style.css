@@ -9,16 +9,24 @@
 	height: 70%;}
 
 header{
-	background: rgba(245,245,245, 0.8);
-	padding: 10px 0;}
+	background: rgba(245,245,245, 0.8) !important;
+	padding: 10px 0 !important;}
 
-nav{
+#et-top-navigation{
+	background: none !important;
+	border: none !important; 
+	outline: none !important;
+	clear: none !important;
+	float: right !important;
+	bottom: 0 !important;}
+
+.home.page-template nav{
 	float: right !important; }
-	nav li{ 
+	.home.page-template nav li{ 
 		display: block !important;
 		background: none !important; 
 		text-align: right !important; }
-	nav li:after{
+	.home.page-template nav li:after{
 		content: '';}
 		
 footer{
@@ -26,4 +34,40 @@ footer{
 	background: rgba(0,0,0, 0.8);
 	padding: 10px; 
 	color: #f5f5f5; 
+	}
+
+#et_top_search, .social-icons{ display: none !important;}
+
+.mobile_menu_bar{
+	left: auto !important;
+	right: 40px; }
+
+#et_mobile_nav_menu{
+	width: 100px;
+	text-align: right;}
+	
+@media screen and (max-width: 950px){
+	#fsi-full-bg img{ display: none;}
+	#fsi-full-bg img:first-child{ 
+		display: block !important; 
+		opacity: 1 !important;
+		
+		width: 100%;
+		min-height: 100%;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		overflow: auto;
+		position: fixed;
+		right: 0;
+		top: 0;
+		}
+	}
+@media screen and (max-width: 767px){
+	#plax-logo{
+		width: 200px; }
+	}
+@media screen and (max-width: 480px){
+	#plax-logo{
+		width: 110px; }
 	}
