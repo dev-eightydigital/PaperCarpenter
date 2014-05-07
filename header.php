@@ -93,10 +93,10 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 						</div>
 						<div class="social-icons">
 						<ul>
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+						<li><a href="#" class="icon-fb"></a></li>
+						<li><a href="#" class="icon-tw"></a></li>
+						<li><a href="#" class="icon-yt"></a></li>
+						<li><a href="#" class="icon-ig"></a></li>
 						</ul>
 						</div>
 		
