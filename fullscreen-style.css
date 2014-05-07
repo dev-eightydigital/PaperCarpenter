@@ -45,22 +45,26 @@ footer{
 #et_mobile_nav_menu{
 	width: 100px;
 	text-align: right;}
-	
+
+#fsi-full-bg img{
+	width: 100%;
+	min-height: 100%;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	}
+
 @media screen and (max-width: 950px){
 	#fsi-full-bg img{ display: none;}
 	#fsi-full-bg img:first-child{ 
 		display: block !important; 
 		opacity: 1 !important;
 		
-		width: 100%;
-		min-height: 100%;
-		bottom: 0;
-		left: 0;
-		margin: auto;
-		overflow: auto;
-		position: fixed;
-		right: 0;
-		top: 0;
+		
 		}
 	}
 @media screen and (max-width: 767px){
