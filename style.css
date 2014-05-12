@@ -31,12 +31,30 @@ Author URI: http://www.eightydigital.com
 	color: #8d8d8d;}
 @media screen and (max-width: 1100px){
 	.follow_us_title{
-		font-size: 1em !important; }	
+		font-size: 1em !important; }
+	
+	.et_pb_slide_description{
+		margin: 50px 35px !important; 
+		padding: 20px !important; }
+	a.et_pb_more_button{
+		padding: 10px 0 !important; 
+		display: block !important; }
+		
 	#main-footer .social-icons li a {
 		width: 40px !important;
 		height: 40px !important;
 		font-size: 20px !important;
 		}
+	#main-footer .social-icons li a.icon-fb{ background-position: -5px -5px !important; }
+	#main-footer .social-icons li a.icon-tw{ background-position: -55px -5px !important; }
+	#main-footer .social-icons li a.icon-yt{ background-position: -103px -5px !important; }
+	#main-footer .social-icons li a.icon-ig{ background-position: -153px -5px !important; }
+	
+	#main-footer .social-icons li a.icon-fb:hover{ background-position: -5px -53px !important; }
+	#main-footer .social-icons li a.icon-tw:hover{ background-position: -55px -53px !important; }
+	#main-footer .social-icons li a.icon-yt:hover{ background-position: -103px -53px !important; }
+	#main-footer .social-icons li a.icon-ig:hover{ background-position: -153px -53px !important; }
+	
 	.footer-widget,
 	.footer-widget:first-child {
 		width: 210px !important;
@@ -50,6 +68,17 @@ Author URI: http://www.eightydigital.com
 		
 	.et_pb_main_blurb_image img{
 		height: 280px !important; }
+	}
+	
+@media screen and (max-width: 767px){
+	.et_pb_slide_description{
+		width: auto !important; }
+	}
+@media screen and (max-width: 480px){
+		a.et_pb_more_button{
+			display: none !important}
+		.et_pb_slide_description h2{
+			border-bottom: none !important; }
 	}
 
 nav #top-menu li{
@@ -342,7 +371,7 @@ table.shop_table { margin-bottom: 30px !important; }
 	.et_pb_testimonial p:last-of-type { padding-bottom: 0px; }
 
 .et-pb-arrow-prev:before, .et-pb-arrow-next:before, .et_pb_testimonial:before, .et_pb_toggle_title:before, .et_overlay:before, #et_search_icon:before, .mobile_menu_bar:before, .et-social-icon a:before { font-family: 'ETmodules'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-	#et_search_icon:before { content: "\66"; font-size: 17px; left: 0; position: absolute; top: -3px; }
+	#et_search_icon:before { font-family: 'FontAwesome'; content: "\f002"; font-size: 17px; left: 0; position: absolute; top: -3px; }
 	.et-fixed-header #et_search_icon:before { top: -9px;}
 	#et_search_icon:hover { cursor: pointer; }
 	.et_pb_testimonial:before { content: "\65"; font-size: 32px; left: 50%; position: absolute; top: -16px; background: #fff; margin-left: -16px; -moz-border-radius: 31px; -webkit-border-radius: 31px; border-radius: 31px; }
@@ -835,7 +864,17 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 .et_pb_slider .et_pb_slide:first-child { display: list-item; }
 .et_pb_container { width: 1080px; margin: 0 auto; position: relative; z-index: 2; }
 
-.et_pb_slide_description { padding: 210px 100px; -webkit-animation-duration: .7s; -webkit-animation-delay: .9s; -webkit-animation-timing-function: ease-in-out; -webkit-animation-fill-mode: both; -moz-animation-duration: .7s; -moz-animation-delay: .9s; -moz-animation-timing-function: ease-in-out; -moz-animation-fill-mode: both; -o-animation-duration: .7s; -o-animation-delay: .9s; -o-animation-timing-function: ease-in-out; -o-animation-fill-mode: both; -ms-animation-duration: .7s; -ms-animation-delay: .9s; -ms-animation-timing-function: ease-in-out; -ms-animation-fill-mode: both; animation-duration: .7s; animation-delay: .9s; animation-timing-function: ease-in-out; animation-fill-mode: both; -webkit-animation-name: fadeBottom; -moz-animation-name: fadeBottom; -ms-animation-name: fadeBottom; -o-animation-name: fadeBottom; animation-name: fadeBottom; }
+.et_pb_slide_description { 
+	float: right;
+	width: 390px;
+	background: rgba(90, 139, 33, 0.8);
+	padding: 20px; 
+	margin: 50px 0;
+	
+	-webkit-animation-duration: .7s; -webkit-animation-delay: .9s; -webkit-animation-timing-function: ease-in-out; -webkit-animation-fill-mode: both; -moz-animation-duration: .7s; -moz-animation-delay: .9s; -moz-animation-timing-function: ease-in-out; -moz-animation-fill-mode: both; -o-animation-duration: .7s; -o-animation-delay: .9s; -o-animation-timing-function: ease-in-out; -o-animation-fill-mode: both; -ms-animation-duration: .7s; -ms-animation-delay: .9s; -ms-animation-timing-function: ease-in-out; -ms-animation-fill-mode: both; animation-duration: .7s; animation-delay: .9s; animation-timing-function: ease-in-out; animation-fill-mode: both; -webkit-animation-name: fadeBottom; -moz-animation-name: fadeBottom; -ms-animation-name: fadeBottom; -o-animation-name: fadeBottom; animation-name: fadeBottom;
+	}
+/*.et_pb_slide_description *{
+	color: #fff !important; }*/
 .et_pb_slider_fullwidth_off .et_pb_slide_description { padding: 185px 100px; }
 .et_pb_bg_layout_dark .et_pb_slide_description { text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);  }
 
@@ -859,11 +898,13 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 
 .et_pb_slide_image img { vertical-align: bottom; }
 .et_pb_slide_with_image .et_pb_slide_description { width: 510px; padding-left: 0; padding-right: 0; text-align: left; padding-bottom: 200px; float: left; }
-	.et_pb_slide_description h2 { font-weight: 300; font-size: 30px; }
+	.et_pb_slide_description h2 { font-weight: 300; font-size: 35px; border-bottom: 1px solid #7fb34f; padding-bottom: 15px; margin-bottom: 10px; text-align: left;}
 	.et_pb_slide_content { font-size: 15px; padding-bottom: 24px; font-weight: 400; color: #333; }
 	.et_pb_slide_content p:last-of-type { padding-bottom: 0px;}
 	.et_pb_bg_layout_dark .et_pb_slide_content { color: #fff;}
-		a.et_pb_more_button { color: inherit; text-shadow: none; text-decoration: none; background-color: rgba(0, 0, 0, 0.35); display: inline-block; }
+		a.et_pb_more_button { color: inherit !important; text-shadow: none; text-decoration: none; display: block; font-size: 12px; text-align: left; padding: 20px 0 0px 0; border-top: 1px solid #7fb34f;}
+		a.et_pb_more_button:after { font-family: 'FontAwesome'; content: "\f18e"; margin-left: 5px; vertical-align: middle; font-size: 20px; }
+		a.et_pb_more_button:hover{ color: #ccc !important; } 
 .et_pb_slider_parallax .et_pb_slide, .et_pb_section_parallax { background-attachment: fixed; }
 .et_mobile_device .et_pb_slider_parallax .et_pb_slide, .et_mobile_device .et_pb_section_parallax { background-attachment: scroll; }
 
@@ -1174,7 +1215,7 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 	.et_pb_column_4_4 .et_pb_slider_fullwidth_off .et_pb_slide_image, .et_pb_column_3_4 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_image, .et_pb_column_1_4 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_image, .et_pb_column_1_3 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_image, .et_pb_column_2_3 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_image, .et_pb_column_1_2 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_image,
 	.et_pb_column_4_4 .et_pb_slider_fullwidth_off .et_pb_slide_video, .et_pb_column_3_4 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_video, .et_pb_column_1_4 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_video, .et_pb_column_1_3 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_video, .et_pb_column_2_3 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_video, .et_pb_column_1_2 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_video { width: 255px; margin-left: 60px; }
 	.et_pb_column_4_4 .et_pb_slider_fullwidth_off .et_pb_slide_video, .et_pb_column_3_4 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_video, .et_pb_column_1_4 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_video, .et_pb_column_1_3 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_video, .et_pb_column_2_3 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_video, .et_pb_column_1_2 .et_pb_slider_fullwidth_off .et_pb_slide_with_image .et_pb_slide_video { margin-left: 56px; }
-	.et_pb_more_button { display: inline-block !important; }
+	/*.et_pb_more_button { display: inline-block !important; }*/
 	.et_pb_slide_image, .et_pb_slide_video { display: block !important; }
 
 	.et_pb_pricing_table { width: 50%!important; }
