@@ -1,5 +1,6 @@
 
 	<footer id="main-footer">
+		
 		<?php get_sidebar( 'footer' ); ?>
 
 		<div id="footer-bottom">
