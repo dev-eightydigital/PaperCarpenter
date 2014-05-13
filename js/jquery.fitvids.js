@@ -80,8 +80,13 @@
 		  var videoID = 'fitvid' + Math.floor(Math.random()*999999);
 		  $this.attr('id', videoID);
 		}
-		$this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 70)+"%");
-		$this.removeAttr('height').removeAttr('width');
+		$this.wrap('<center class="fluid-width-video-wrapper"></center>').parent('.fluid-width-video-wrapper')
+			.css({
+				'padding-top': $this.attr('height')+"px",
+				'width' : $this.attr('width'),
+				'margin': '0 auto'
+				});//(aspectRatio * 90)+"%");
+		//$this.removeAttr('height').removeAttr('width');
 	  });
 	});
   };
