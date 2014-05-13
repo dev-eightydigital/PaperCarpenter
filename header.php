@@ -93,10 +93,10 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 						</div>
 						<div class="social-icons">
 						<ul>
-						<li><a href="#" class="icon-fb"></a></li>
-						<li><a href="#" class="icon-tw"></a></li>
-						<li><a href="#" class="icon-yt"></a></li>
-						<li><a href="#" class="icon-ig"></a></li>
+						<li><a href="<?php echo esc_url( et_get_option( 'divi_facebook_url', '#' ) );?>" class="icon-fb" target="_blank"></a></li>
+		<li><a href="<?php echo esc_url( et_get_option( 'divi_twitter_url', '#' ) );?>" class="icon-tw" target="_blank"></a></li>
+		<li><a href="<?php echo esc_url( et_get_option( 'divi_youtube_url', '#' ) );?>" class="icon-yt" target="_blank"></a></li>
+		<li><a href="<?php echo esc_url( et_get_option( 'divi_instagram_url', '#' ) );?>" class="icon-ig" target="_blank"></a></li>
 						</ul>
 						</div>
 		
