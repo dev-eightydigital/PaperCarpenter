@@ -7,28 +7,41 @@ Author: EightyDigital Pte. Ltd.
 Author URI: http://www.eightydigital.com
 */
 
-/* page--aboutus : page-id-864 */
-/*.page-id-864 .et_pb_row{ width: 1200px; }
+/************************************************* page styles */
+
+
 .page-id-864 #page--aboutus-desc{ 
 	width: 810px; 
 font-size: 13px;
-color: #7c7c7c; }
-*/
+color: #7c7c7c;}
 
-/* for homepages */
-.page-id-715 .ib-trail, /* pageid: inner homepage*/
-.page-id-763 .ib-trail{ /* pageid: full screen homepage */
+/* for full screen homepage */
+.page-id-2 .ib-trail,
+.page-id-807 .ib-trail{
 	display: none; }
 
-/* breadcrumb */
-.ib-trail{
-	width: 1200px;
-	margin: 40px auto 0;
-	outline: 1px solid #d7d7d7;
-	border: 1px solid #fff;
-	background: #f5f5f5; 
-	color: #959595; }
+#pc-contact-form .wpcf7{
+	background: transparent !important; }
 
+.pbbox h3{
+	font-size: 33px;
+	vertical-align: bottom;
+	color: #66a327; }
+
+.pbbox2 h3{
+	font-size: 18px;
+	vertical-align: bottom;
+	color: #648d3a; }
+
+#page--aboutus-desc img{
+	vertical-align: middle;
+	margin-right: 15px;}
+
+.pbbox2 #wgmpmap{
+	margin-bottom: 20px; }
+/* breadcrumb */
+.ib-trail{ 
+	padding: 5px 0 !important; }
 .ib-trail a{ 
 	color: #959595 !important; }
 .ib-trail a:hover{
@@ -39,14 +52,13 @@ color: #7c7c7c; }
 .ib-trail ul li{
 	list-style: none;
 	display: inline-block; }
-.ib-trail ul li:first-child:before{
-	content: ''; 
-	margin: 0; }
-.ib-trail ul li:before{
+.ib-trail ul li:last-child:before{
 	font-family: 'FontAwesome';
 	content: "\f138";
 	margin: 0 10px; }
 /* \breadcrumb */
+
+/*************************************************\page styles*/
 
 .wpcf7-text, .wpcf7-textarea{
 	border: 1px solid #ccc; }
@@ -55,14 +67,8 @@ p input[type="submit"]{
 	background: #628f36;
 	color: #fff;
 	border: none;
-	padding: 5px 30px;
-	border-radius: 5px; }
-div.wpcf7 {
-	margin: 0;
-	padding: 20px;
-	background: #fff;
-	border: 1px solid #f5f5f5;}
-	
+	padding: 5px; }
+
 .clear{ clear: both; }
 
 .foottop-borders b{
@@ -286,10 +292,10 @@ blockquote p { padding-bottom: 0px; }
 input { -webkit-appearance: none; }
 input[type=checkbox] { -webkit-appearance: checkbox; }
 input[type=radio] { -webkit-appearance: radio; }
-input[type=text],input.text, input.title, textarea, select { background-color:#fff; border:1px solid #bbb; padding: 2px; color: #4e4e4e; }
+input[type=text], input[type=email], input[type=submit],input.text, input.title, textarea, select { background-color:#fff; border:1px solid #bbb; padding: 2px; color: #4e4e4e; width: 100%; }
 input[type=text]:focus, input[type=email]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus { border-color:#2D3940; color: #3e3e3e; }
 input[type=text], input.text, input.title, textarea, select { margin: 0; }
-textarea { padding: 4px; }
+textarea { padding: 2px; }
 
 img#about-image { float: left; margin: 3px 8px 8px 0px; }
 
@@ -474,7 +480,10 @@ table.shop_table { margin-bottom: 30px !important; }
 	.et_pb_column_1_4 .et_pb_blog_grid .et_pb_post { width: 185px; }
 	.et_pb_bg_layout_dark.et_pb_blog_grid .et_pb_post { border-color: rgba(0, 0, 0, 0.1); }
 		.et_pb_image_container { margin: -19px -19px 10px; }
-		.et_pb_image { margin-bottom: 30px;}
+		.et_pb_image { 
+			margin-bottom: 30px;
+			height: 200px;
+			border: 1px solid #eee;}
 		.et_pb_blog_grid h2 { font-size: 18px; }
 
 	.et_pb_portfolio_item { margin-bottom: 42px; }
@@ -753,20 +762,20 @@ body.woocommerce div.product .woocommerce-tabs .panel, body.woocommerce #content
 /*---------------[DROPDOWN MENU]------------------*/
 /*------------------------------------------------*/
 
-#et-top-navigation { 
+#et-top-navigation, .ib-trail { 
 	clear: both; 
 	background: #f5f5f5; 
 	padding: 10px 10px 10px 20px; 
-	box-shadow:  0 0 0 1px #ffffff, 0 0 0 2px #d7d7d7;
+	box-shadow:  0 0 0 1px #ffffff inset, 0 0 0 1px #d7d7d7;
 	position: relative;
-	bottom: -30px;
-	z-index: 5; }
+	bottom: -80px;
+	margin-bottom: 10px; }
 
 .nav li { position: relative; }
 .nav li ul { position: absolute; top: 52px; left: -27px; padding: 20px; }
 .et-fixed-header .nav li ul { top: 38px; }
 .et-fixed-header .nav li li ul { top : -3px ;}
-.nav li ul { position: absolute; z-index: 9999; width: 200px; background: #fff; visibility: hidden; opacity: 0; border-top: 3px solid #7EBEC5; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+.nav li ul { z-index: 9999; width: 200px; background: #fff; visibility: hidden; opacity: 0; border-top: 3px solid #7EBEC5; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
 .nav li ul { -webkit-transform: translate3d(0,0,0); }
 .nav li.et-hover > ul { visibility: visible; }
 .nav li:hover > ul, .nav li.et-hover > ul { -moz-transition: opacity .2s ease-in-out; -webkit-transition: opacity .2s ease-in-out; transition: opacity .2s ease-in-out; }
@@ -1512,3 +1521,7 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 
 	table.cart th, #content table.cart th, table.cart td, #content table.cart td, table.cart tr, #content table.cart tr { padding: .857em 0.287em !important; }
 }
+
+.page-id-874 .et_pb_row, /* page--aboutus : page-id-874 */
+.page-id-864 .et_pb_row{ /* page--aboutus : page-id-864 */
+	/* width: 1200px; */ }
