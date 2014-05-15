@@ -14,8 +14,7 @@ header{
 
 #et-top-navigation{
 	background: none !important;
-	border: none !important; 
-	outline: none !important;
+	box-shadow: none !important;
 	clear: none !important;
 	float: right !important;
 	bottom: 0 !important;}
