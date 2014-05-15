@@ -6,6 +6,45 @@ Description: Responsive design for Paper Carpenter
 Author: EightyDigital Pte. Ltd.
 Author URI: http://www.eightydigital.com
 */
+
+/* page--aboutus : page-id-864 */
+/*.page-id-864 .et_pb_row{ width: 1200px; }
+.page-id-864 #page--aboutus-desc{ 
+	width: 810px; 
+font-size: 13px;
+color: #7c7c7c; }
+*/
+
+/* for homepages */
+.page-id-715 .ib-trail, /* pageid: inner homepage*/
+.page-id-763 .ib-trail{ /* pageid: full screen homepage */
+	display: none; }
+
+/* breadcrumb */
+.ib-trail{
+	width: 1200px;
+	margin: 40px auto 0;
+	outline: 1px solid #d7d7d7;
+	border: 1px solid #fff;
+	background: #f5f5f5; 
+	color: #959595; }
+
+.ib-trail a{ 
+	color: #959595 !important; }
+.ib-trail a:hover{
+	color: #7cc68d !important; }
+	
+.ib-trail ul{
+	padding: 10px 10px 10px 20px; }
+.ib-trail ul li{
+	list-style: none;
+	display: inline-block; }
+.ib-trail ul li:last-child:before{
+	font-family: 'FontAwesome';
+	content: "\f138";
+	margin: 0 10px; }
+/* \breadcrumb */
+
 .wpcf7-text, .wpcf7-textarea{
 	border: 1px solid #ccc; }
 
