@@ -104,6 +104,7 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 						<div class="clear"></div>
 					</div> <!-- #et-top-navigation -->
 			</div>
+			<?php instant_breadcrumb(); ?>
 		</div> <!-- .container -->
 	</header> <!-- #main-header -->
 	
@@ -111,4 +112,3 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 var templateUrl = '<?= get_bloginfo("template_url"); ?>';
 </script>
 
-<?php instant_breadcrumb(); ?>
