@@ -110,3 +110,5 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 <script type="text/javascript">
 var templateUrl = '<?= get_bloginfo("template_url"); ?>';
 </script>
+
+<?php instant_breadcrumb(); ?>
