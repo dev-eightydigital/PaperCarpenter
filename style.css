@@ -88,6 +88,10 @@ ul.page-numbers{
 .post--container .title{
 	font-weight: normal; }
 	.post--container .title a{ color: #000;}
+.post--container .meta{
+	padding-bottom: 10px; }
+.post--container .mr_social_sharing_wrapper img{
+	box-shadow: none; }
 
 .more-link{
 	display: block;
