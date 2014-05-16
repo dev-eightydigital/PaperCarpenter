@@ -8,13 +8,12 @@ Author URI: http://www.eightydigital.com
 */
 
 /************************************************* page styles */
-
-
 .page-id-864 #page--aboutus-desc{ 
 	font-size: 13px;
 	color: #7c7c7c;}
 
 /* for full screen homepage */
+.page-id-715 .ib-trail,
 .page-id-2 .ib-trail,
 .page-id-807 .ib-trail{
 	display: none; }
@@ -35,7 +34,7 @@ Author URI: http://www.eightydigital.com
 #page--aboutus-desc img{
 	vertical-align: middle;
 	margin-right: 15px;}
-
+.post--container img, 
 #page--aboutus-img img{
 	box-shadow:  0 0 0 1px #ffffff inset, 0 0 0 1px #d7d7d7; }
 
@@ -57,11 +56,50 @@ Author URI: http://www.eightydigital.com
 .ib-trail ul li{
 	list-style: none;
 	display: inline-block; }
-.ib-trail ul li:last-child:before{
+.ib-trail ul li:before{
 	font-family: 'FontAwesome';
 	content: "\f138";
 	margin: 0 10px; }
+.ib-trail ul li:first-child:before{
+	content: '';
+	margin: 0; }
 /* \breadcrumb */
+
+.post--container{
+	margin-bottom: 20px; }
+.post--container .meta{
+	color: #666666; }
+.post--container .meta a{
+	color: #888; }
+
+/* pagination */
+.pc-pagin{
+	margin-bottom: 10px; }
+ul.page-numbers{
+	margin: 0;
+	padding: 0; }
+
+	ul.page-numbers li{ 
+		list-style: none; 
+		display: inline-block; 
+		margin-right: 5px; }
+/* \pagination */
+
+.post--container .title{
+	font-weight: normal; }
+	.post--container .title a{ color: #000;}
+
+.more-link{
+	display: block;
+	color: #fff !important;
+	padding: 15px 0;
+	background: #71a940;
+	width: 182px;
+	margin: 15px 0;
+	text-align: center; }
+	.more-link:hover{ 
+		box-shadow:  0 0 0 1px #ffffff inset, 0 0 0 1px #d7d7d7; 
+		text-decoration: none; }
 
 /*************************************************\page styles*/
 
@@ -776,8 +814,9 @@ body.woocommerce div.product .woocommerce-tabs .panel, body.woocommerce #content
 	padding: 10px 10px 10px 20px; 
 	box-shadow:  0 0 0 1px #ffffff inset, 0 0 0 1px #d7d7d7;
 	position: relative;
-	bottom: -90px;
+	bottom: -100px;
 	margin-bottom: 10px; }
+.page-id-715 #et-top-navigation,
 .page-id-2 #et-top-navigation{
 	bottom: -30px; 
 	margin-bottom: 0;
@@ -1249,6 +1288,11 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 /*-------------------[768px]------------------*/
 @media only screen and ( max-width: 980px ) {
 	#et-top-navigation, .ib-trail{ bottom: -120px; }
+	
+	.page-id-715 #et-top-navigation,
+	.page-id-2 #et-top-navigation{
+		bottom: -50px; }
+		
 	.et_pb_row{ padding-top: 60px; }
 
 	.et_pb_blurb_content { text-align: center; }
