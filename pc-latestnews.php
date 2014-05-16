@@ -15,12 +15,13 @@ get_header();
 					<?php
 						$loop = new WP_QUERY( array(
 							'post_type' => 'post',
+							'posts_per_page' => 2, 
 							'paged' => $paged
 						) );
 						if($loop->have_posts()): while($loop->have_posts()): $loop->the_post();
 							?>
 							<div class="row-fluid post--container">
-								<div class="span3"><?php the_post_thumbnail(); ?></div>
+								<div class="span3"><?php the_post_thumbnail('PaperCarp-featimg'); ?></div>
 								<div class="span9">
 									<h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 									<div class="meta"><?php et_divi_post_meta(); ?></div>
