@@ -1,4 +1,5 @@
 <?php 
+define('HOMEPAGE', 715);
 define('FULLSCREEN_HOMEPAGE', 763);
 if ( ! isset( $_SESSION ) ) session_start(); ?>
 <!DOCTYPE html>
@@ -42,7 +43,7 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 <body <?php body_class(); ?>>
 	<header id="main-header">
 		<div class="container clearfix">
-			<div id="shell">
+			
 				<?php
 					$logo = ( $user_logo = et_get_option( 'divi_logo' ) ) && '' != $user_logo
 						? $user_logo
@@ -51,6 +52,7 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<img id="logo" src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 					</a>
+			<div id="shell" class="<?= (!is_page(array(FULLSCREEN_HOMEPAGE, HOMEPAGE)))? 'wcrumbs': 'xcrumbs';?>">
 					<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 					<div id="et-top-navigation">
 						<nav id="top-menu-nav">
@@ -103,8 +105,12 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 						<?php do_action( 'et_header_top' ); ?>
 						<div class="clear"></div>
 					</div> <!-- #et-top-navigation -->
-			</div>
-			<?php instant_breadcrumb(); ?>
+					<?php 
+						if(!is_page(array(FULLSCREEN_HOMEPAGE, HOMEPAGE))){
+							instant_breadcrumb(); }
+					?>
+			</div><!-- #shell-->
+			
 		</div> <!-- .container -->
 	</header> <!-- #main-header -->
 	
