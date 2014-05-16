@@ -36,6 +36,9 @@ Author URI: http://www.eightydigital.com
 	vertical-align: middle;
 	margin-right: 15px;}
 
+#page--aboutus-img img{
+	box-shadow:  0 0 0 1px #ffffff inset, 0 0 0 1px #d7d7d7; }
+
 .pbbox2 #wgmpmap{
 	margin-bottom: 20px; 
 	box-shadow:  0 0 0 1px #ffffff inset, 0 0 0 1px #d7d7d7; }
@@ -358,7 +361,9 @@ table.shop_table { margin-bottom: 30px !important; }
 
 
 .container { text-align: left; margin: 0 auto; width: 1200px; position: relative; }
-	@media screen and (max-width: 1250px){ .container{ width: 1100px; } }
+	@media screen and (max-width: 1250px){ 
+		.et_pb_row, .container{ width: 1100px !important; } 
+	}
 	body.admin-bar #main-header { top: 32px; }
 	body.et-wp-pre-3_8.admin-bar #main-header { top: 28px; }
 	#main-header { line-height: 23px; font-weight: 500; top: 0; background-color: #fff; width: 100%; z-index: 99999; padding: 18px 0 0 0; min-height: 43px; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
@@ -604,7 +609,7 @@ table.shop_table { margin-bottom: 30px !important; }
 .et_right_sidebar #left-area { float: left; width: 795px; margin-right: 60px; }
 .et_right_sidebar #sidebar { float: right; width: 224px; }
 	#sidebar .et_pb_widget { float: none; margin: 0 0 30px 30px; }
-#main-content .container { padding-top: 58px; }
+#main-content .container { padding-top: 58px; margin-top: 90px; }
 	#main-content .container:before { content: ''; position: absolute; top: 0; height: 100%; width: 1px; background-color: #e2e2e2; }
 
 	.et_right_sidebar #main-content .container:before { right: 224px; }
@@ -773,6 +778,11 @@ body.woocommerce div.product .woocommerce-tabs .panel, body.woocommerce #content
 	position: relative;
 	bottom: -90px;
 	margin-bottom: 10px; }
+.page-id-2 #et-top-navigation{
+	bottom: -30px; 
+	margin-bottom: 0;
+	position: relative;
+	z-index: 5; }
 
 .nav li { position: relative; }
 .nav li ul { position: absolute; top: 52px; left: -27px; padding: 20px; }
@@ -1146,7 +1156,7 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 
 /*-------------------[960px]------------------*/
 @media only screen and ( min-width: 981px ) and ( max-width: 1100px ) {
-	.et_pb_row, .container, .et_pb_container { width: 960px; }
+	.et_pb_row, .container, .et_pb_container { width: 960px !important; }
 
 	.et_pb_column_1_2 { width: 450px; }
 	.et_pb_column_1_3 { width: 280px; }
@@ -1238,11 +1248,13 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 
 /*-------------------[768px]------------------*/
 @media only screen and ( max-width: 980px ) {
+	#et-top-navigation, .ib-trail{ bottom: -120px; }
+	.et_pb_row{ padding-top: 60px; }
 
 	.et_pb_blurb_content { text-align: center; }
 	.et_pb_space {display: none;}
 
-	.et_pb_row, .container, .et_pb_container { width: 690px; }
+	.et_pb_row, .container, .et_pb_container { width: 690px !important; }
 	.et_pb_column {padding-bottom: 30px;}
 	.et_pb_section { padding: 50px 0 20px 0;}
 	.et_pb_fullwidth_section { padding: 0; }
@@ -1373,7 +1385,7 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 	.et_pb_section { padding: 50px 0 20px 0;}
 	.et_pb_fullwidth_section { padding: 0; }
 
-	.et_pb_row, .container, .et_pb_container { width: 400px; }
+	.et_pb_row, .container, .et_pb_container { width: 400px !important; }
 
 	.et_pb_slide_description { padding: 100px 52px; }
 	.et_pb_slide_with_image .et_pb_slide_description { padding-top: 100px; padding-bottom: 100px;}
@@ -1472,7 +1484,7 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 	.et_pb_section { padding: 50px 0 20px 0;}
 	.et_pb_fullwidth_section { padding: 0; }
 
-	.et_pb_row, .container, .et_pb_container { width: 280px; }
+	.et_pb_row, .container, .et_pb_container { width: 280px !important; }
 
 	.et_pb_slide_description { padding: 74px 52px; }
 	.et_pb_slide_with_image .et_pb_slide_description { padding-top: 72px; padding-bottom: 72px;}
