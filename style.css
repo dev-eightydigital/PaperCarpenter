@@ -866,7 +866,7 @@ body.woocommerce div.product .woocommerce-tabs .panel, body.woocommerce #content
 	.et-fixed-header #top-menu li.mega-menu > ul { top: 42px; }
 
 	/*---------------[MOBILE MENU]------------------*/
-	.et_mobile_menu { position: absolute; left: 0; top: 63px; padding: 5%; background: #ebebeb; width: 90%; visibility: visible; opacity: 1; display: none; z-index: 9999; border-top: 3px solid #d7d7d7; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+	.et_mobile_menu { position: absolute; left: 0; top: 215px; padding: 5%; background: #ebebeb; width: 90%; visibility: visible; opacity: 1; display: none; z-index: 9999; border-top: 3px solid #d7d7d7; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
 	.et-fixed-header .et_mobile_menu { top: 41px; }
 	.et_mobile_menu li ul { visibility: visible !important; display: block !important; padding-left: 10px; }
 	.et_mobile_menu li li { padding-left: 5%;}
