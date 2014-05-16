@@ -12,6 +12,8 @@ function custom_upload_mimes ( $existing_mimes=array() ) {
  return $existing_mimes;
 }*/
 
+add_image_size( 'PaperCarp-featimg', 220, 180, true);
+
 //***************footer logo widget**********************
 class footlogo_widget extends WP_Widget {
 
@@ -772,7 +774,7 @@ function et_divi_post_meta() {
 	$postinfo = is_single() ? et_get_option( 'divi_postinfo2' ) : et_get_option( 'divi_postinfo1' );
 
 	if ( $postinfo ) :
-		echo '<p class="post-meta">';
+		echo '<p class="post-meta">Posted ';
 		et_postinfo_meta( $postinfo, et_get_option( 'divi_date_format', 'M j, Y' ), esc_html__( '0 comments', 'Divi' ), esc_html__( '1 comment', 'Divi' ), '% ' . esc_html__( 'comments', 'Divi' ) );
 		echo '</p>';
 	endif;
