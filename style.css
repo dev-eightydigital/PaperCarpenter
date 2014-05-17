@@ -449,8 +449,25 @@ table.shop_table { margin-bottom: 30px !important; }
 		.et_pb_blurb_content p:last-of-type { padding-bottom: 0px;}
 
 		.et_pb_main_blurb_image { text-align: center; margin-bottom: 30px; }
-		.et_pb_blurb h4 { padding-bottom: 5px;}
-			.et_pb_blurb h4 a { text-decoration: none; }
+		.et_pb_blurb h4 { 
+			position: relative; 
+			text-align: center;
+			background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
+			padding: 25px;
+			border-top: 1px solid #FFF;
+			color: #fff;
+			font-size: 23px;
+			font-weight: normal; 
+			animation: blurbtext 3s forwards; }
+		@keyframes blurbtext{
+			from { top: 0px; }
+			to { top: -110px; }
+			}
+		@-webkit-keyframes blurbtext{
+			from { top: 0px; }
+			to { top: -110px; }
+			}
+			.et_pb_blurb h4 a { text-decoration: none; color: #fff; }
 		.et_pb_blurb { margin-bottom: 30px;}
 
 

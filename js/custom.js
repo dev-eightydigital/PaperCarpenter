@@ -4,8 +4,7 @@
 			$('#fsi-full-bg img:first-child').attr('src', templateUrl+'/images/small_res_img.jpg');
 			}
 		});
-	
-
+		
 	$.et_pb_simple_slider = function(el, options) {
 		var settings = $.extend( {
 			slide         			: '.et-slide',				 	// slide class

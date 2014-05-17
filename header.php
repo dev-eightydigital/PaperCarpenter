@@ -37,7 +37,7 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 	<script type="text/javascript">
 		document.documentElement.className = 'js';
 	</script>
-
+	
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
