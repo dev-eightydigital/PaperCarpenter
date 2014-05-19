@@ -4,6 +4,15 @@
 			$('#fsi-full-bg img:first-child').attr('src', templateUrl+'/images/small_res_img.jpg');
 			}
 		});
+	
+	$('.gallery-item').each( function(i){
+		//console.log( 'log: '+ $(this).find('.gallery-caption').text() ); 
+		imgcaption = $(this).find('.gallery-caption').text();
+		imgalt = $(this).find('img').attr('alt');
+		$(this).find('.gallery-caption')
+			.html('<div class="inner-wrap"><div class="imgcaption">'+ imgcaption +'</div><div class="imgalt">'+ imgalt +'</div></div>');
+		
+		});
 		
 	$.et_pb_simple_slider = function(el, options) {
 		var settings = $.extend( {
