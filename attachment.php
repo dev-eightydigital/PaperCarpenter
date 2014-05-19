@@ -1,64 +1,52 @@
-<?php get_header(); ?>
+<?php
+get_header();
+
+$is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 
 <div id="main-content">
+<?php
+if ( have_posts() ) : while ( have_posts() ) : the_post();
+$photographer = get_post_meta($post->ID, 'be_photographer_name', true);
+$photographerurl = get_post_meta($post->ID, 'be_photographer_url', true);
+?>
+
+<?php if ( ! $is_page_builder_used ) : ?>
+
 	<div class="container">
 		<div id="content-area" class="clearfix">
 			<div id="left-area">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if (et_get_option('divi_integration_single_top') <> '' && et_get_option('divi_integrate_singletop_enable') == 'on') echo(et_get_option('divi_integration_single_top')); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
-					<h1><?php the_title(); ?></h1>
+<?php endif; ?>
 
-				<?php
-					et_divi_post_meta();
 
-					$thumb = '';
+<h1><?php the_title(); ?></h1>
 
-					$width = (int) apply_filters( 'et_pb_index_blog_image_width', 1080 );
+<div class="photometa"><span class="photographername"><?php echo $photographer; ?></span> // <a href="<?php echo $photographerurl ?>" target="_blank" class="photographerurl"><?php echo $photographerurl ?></a></div>
 
-					$height = (int) apply_filters( 'et_pb_index_blog_image_height', 675 );
-					$classtext = 'et_featured_image';
-					$titletext = get_the_title();
-					$thumbnail = get_thumbnail( $width, $height, $classtext, $titletext, $titletext, false, 'Blogimage' );
-					$thumb = $thumbnail["thumb"];
+                        <div class="entry-attachment">
+<?php if ( wp_attachment_is_image( $post->id ) ) : $att_image = wp_get_attachment_image_src( $post->id, "full"); ?>
+                        <p class="attachment"><a href="<?php echo wp_get_attachment_url($post->id); ?>" title="<?php the_title(); ?>" rel="attachment"><img src="<?php echo $att_image[0];?>" width="<?php echo $att_image[1];?>" height="<?php echo $att_image[2];?>"  class="attachment-medium" alt="<?php $post->post_excerpt; ?>" /></a>
+                        </p>
+<?php else : ?>
+                        <a href="<?php echo wp_get_attachment_url($post->ID) ?>" title="<?php echo wp_specialchars( get_the_title($post->ID), 1 ) ?>" rel="attachment"><?php echo basename($post->guid) ?></a>
+<?php endif; ?>
+                        </div>
 
-					/*if ( 'on' === et_get_option( 'divi_thumbnails', 'on' ) && '' !== $thumb )
-						print_thumbnail( $thumb, $thumbnail["use_timthumb"], $titletext, $width, $height );*/
-				?>
+<?php endwhile; ?>
 
-					<div class="entry-content">
-					<?php
-						the_content();
+<?php endif; ?>
 
-						wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'Divi' ), 'after' => '</div>' ) );
-					?>
-					</div> <!-- .entry-content -->
 
-					<?php
-					if ( et_get_option('divi_468_enable') == 'on' ){
-						echo '<div class="et-single-post-ad">';
-						if ( et_get_option('divi_468_adsense') <> '' ) echo( et_get_option('divi_468_adsense') );
-						else { ?>
-							<a href="<?php echo esc_url(et_get_option('divi_468_url')); ?>"><img src="<?php echo esc_attr(et_get_option('divi_468_image')); ?>" alt="468 ad" class="foursixeight" /></a>
-				<?php 	}
-						echo '</div> <!-- .et-single-post-ad -->';
-					}
-				?>
+<?php if ( ! $is_page_builder_used ) : ?>
 
-					<?php
-						if ( comments_open() && 'on' == et_get_option( 'divi_show_postcomments', 'on' ) )
-							comments_template( '', true );
-					?>
-				</article> <!-- .et_pb_post -->
-
-				<?php if (et_get_option('divi_integration_single_bottom') <> '' && et_get_option('divi_integrate_singlebottom_enable') == 'on') echo(et_get_option('divi_integration_single_bottom')); ?>
-			<?php endwhile; ?>
 			</div> <!-- #left-area -->
 
 			<?php get_sidebar(); ?>
 		</div> <!-- #content-area -->
 	</div> <!-- .container -->
+
+<?php endif; ?>
+
 </div> <!-- #main-content -->
 
 <?php get_footer(); ?>
