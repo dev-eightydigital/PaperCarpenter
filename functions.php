@@ -13,6 +13,7 @@ function custom_upload_mimes ( $existing_mimes=array() ) {
 }*/
 
 add_image_size( 'PaperCarp-featimg', 252, 317, true);
+add_image_size( 'PaperCarp-featimg-medium', 300, 250, true);
 
 //***************footer logo widget**********************
 class footlogo_widget extends WP_Widget {
