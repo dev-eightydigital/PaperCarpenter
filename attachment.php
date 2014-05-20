@@ -57,11 +57,40 @@ $photographerurl = get_post_meta($post->ID, 'be_photographer_url', true);
 	
 <div class="row-fluid post--container">
 	<div class="span7 tab-content">
-		<div class="tab-01">111111</div>
-		<div class="tab-02">222222</div>
-		<div class="tab-03">333333</div>
+		<div class="tab-01">Dignissim facilisi ipsum ullamcorper dolore vulputate ea, suscipit eum duis delenit delenit nostrud. Esse vulputate ut aliquip at, consectetuer ut, volutpat, molestie autem ut sit lorem dolore illum ullamcorper zzril nonummy illum, duis accumsan in, augue enim tincidunt. Laoreet commodo elit amet feugiat nulla luptatum duis tincidunt nulla nulla minim velit feugait accumsan, magna minim, feugait nibh. Wisi vero erat duis ea magna eros enim exerci, vel.</div>
+		
+		<div class="tab-02">
+			<h3 class="tabHead">Vel ea hendrerit molestie</h3>
+			
+			<div class="att-addinfo">
+				<ol>
+					<li>
+						<h6>Nulla esse suscipit luptatum</h6>
+						<p>Autem, feugait at minim vero duis accumsan zzril ut illum elit vero in molestie suscipit vulputate feugait, ullamcorper zzril ea delenit blandit dolore minim in.</p>
+					</li>
+					<li>
+						<h6>Nulla esse suscipit luptatum</h6>
+						<p>Autem, feugait at minim vero duis accumsan zzril ut illum elit vero in molestie suscipit vulputate feugait, ullamcorper zzril ea delenit blandit dolore minim in.</p>
+					</li>
+					<li>
+						<h6>Nulla esse suscipit luptatum</h6>
+						<p>Autem, feugait at minim vero duis accumsan zzril ut illum elit vero in molestie suscipit vulputate feugait, ullamcorper zzril ea delenit blandit dolore minim in.</p>
+					</li>
+					<li>
+						<h6>Nulla esse suscipit luptatum</h6>
+						<p>Autem, feugait at minim vero duis accumsan zzril ut illum elit vero in molestie suscipit vulputate feugait, ullamcorper zzril ea delenit blandit dolore minim in.</p>
+					</li>
+					<li>
+						<h6>Nulla esse suscipit luptatum</h6>
+						<p>Autem, feugait at minim vero duis accumsan zzril ut illum elit vero in molestie suscipit vulputate feugait, ullamcorper zzril ea delenit blandit dolore minim in.</p>
+					</li>
+				</ol>
+			</div>
+		</div>
+		
+		<div class="tab-03">Vel ea hendrerit molestie, accumsan zzril, iusto facilisis, eu tation odio iriure minim et elit nostrud dolore, te. Ex illum dignissim, ut blandit consequat ex blandit praesent hendrerit nostrud dolor nonummy suscipit facilisi. Feugait ullamcorper dolore vulputate ea, suscipit eum duis delenit. Iriure nostrud qui vulputate ut aliquip at, consectetuer ut, volutpat, molestie autem ut sit lorem dolore illum ullamcorper. Dolor nonummy illum, duis accumsan in, augue enim tincidunt wisi commodo elit amet feugiat nulla luptatum duis tincidunt nulla nulla minim velit feugait accumsan, magna minim. Ad nibh, sed vero erat duis ea magna eros enim exerci, vel ipsum, dignissim volutpat iusto wisi molestie vulputate.</div>
 	</div>
-	<div class="span5 form-interest"><?= do_shortcode('[contact-form-7 id="1096" title="Interest"]'); ?></div>
+	<div class="span5 form-interest"><?= do_shortcode('[contact-form-7 id="1096" title="Review"]'); ?></div>
 </div>
 
 
@@ -88,8 +117,9 @@ $photographerurl = get_post_meta($post->ID, 'be_photographer_url', true);
 		$(tab).addClass('selected');
 		$('.tab-content .'+target)
 			.show()
-			.addClass('selected'); }
-
+			.addClass('selected'); 
+		$('.tab-content .'+target+' div').show(); }
+		
 	
 	hideTabContent();
 	showTabContent('tab-02', $('#tabs li a:eq('+1+')'));
