@@ -13,16 +13,22 @@ Author URI: http://www.eightydigital.com
 	.form-interest form label{
 		float: left; 
 		margin-right: 10px; 
+		font-size: 12px;
 		width: 100px; }
 	.form-interest form input[type=text],
 	.form-interest form input[type=email],
 	.form-interest form input[type=tel],
 	.form-interest form textarea{
-		width: 350px; }
+		width: 350px; 
+		border: 1px solid #7e7e7e; 
+		border-radius: 0; }
 	.form-interest form input[type=submit]{
 		float: right; 
 		padding: 5px 20px;
 		font-size: 12px; }
+	.form-interest form p{
+		margin: 5px 0;
+		padding: 0; }
 	
 .gallery_imgs img{
 	border: none !important;
@@ -54,6 +60,33 @@ Author URI: http://www.eightydigital.com
 		#tabs li a.selected{
 			color: #aaaaaa; 
 			border-bottom: 2px solid #383838; }
+.tab-content .tabHead{
+	margin: 0 0 20px;
+	padding: 0;
+	width: 60%;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 15px;
+	background: url(images/tabHead-border.gif) repeat-x bottom center; }
+
+.att-addinfo ol, .att-addinfo ul{
+	margin: 0;
+	padding: 0; }
+	.att-addinfo ol li{
+		list-style-type: decimal !important; 
+		color: #759b12; }
+	.att-addinfo li{
+		list-style-position: inside;
+		font-size: 12px;
+		margin-bottom: 20px; }
+	.att-addinfo ol li h6{
+		margin: 0;
+		padding: 0;
+		color: #759b12; }
+	.att-addinfo ol li p{
+		margin: 0;
+		padding: 0; 
+		color: #333; }
 
 /************************************************* page styles */
 .page-id-864 #page--aboutus-desc{ 
@@ -366,7 +399,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
 
 body { line-height: 1; }
-ol, ul { list-style: none; }
+/*ol, ul { list-style: none; }*/
 blockquote, q {	quotes: none; }
 
 blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
@@ -506,7 +539,7 @@ table.shop_table { margin-bottom: 30px !important; }
 		.et-fixed-header nav#top-menu-nav { padding-top: 4px;}
 		.et-fixed-header #top-menu > li > a { padding-bottom: 15px;}
 
-		#logo { float: left; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; margin-bottom: 18px; }
+		#logo { float: left; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; margin-bottom: 18px; position: relative; z-index: 6;}
 		.et_fixed_nav #logo { max-height: 43px; margin-bottom: 0; }
 		.et-fixed-header #logo { max-height: 30px; }
 
