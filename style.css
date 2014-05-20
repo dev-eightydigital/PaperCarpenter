@@ -6,7 +6,7 @@ Description: Responsive design for Paper Carpenter
 Author: EightyDigital Pte. Ltd.
 Author URI: http://www.eightydigital.com
 */
-/** form-interest : attachment page */
+/** form-review : attachment page */
 .form-interest form{
 	margin: 0;
 	padding: 0; }
@@ -74,7 +74,8 @@ Author URI: http://www.eightydigital.com
 	padding: 0; }
 	.att-addinfo ol li{
 		list-style-type: decimal !important; 
-		color: #759b12; }
+		color: #759b12;
+		overflow: hidden; }
 	.att-addinfo li{
 		list-style-position: inside;
 		font-size: 12px;
@@ -82,7 +83,8 @@ Author URI: http://www.eightydigital.com
 	.att-addinfo ol li h6{
 		margin: 0;
 		padding: 0;
-		color: #759b12; }
+		color: #759b12;
+		display: inline-block; }
 	.att-addinfo ol li p{
 		margin: 0;
 		padding: 0; 
