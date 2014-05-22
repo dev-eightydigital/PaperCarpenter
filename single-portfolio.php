@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>" media="all">
 <?php $template_directory_uri = get_template_directory_uri(); ?>
 <link rel="stylesheet" href="<?php echo $template_directory_uri; ?>/includes/bootstrap/css/bootstrap.css"  type="text/css" />
 <link rel="stylesheet" href="<?php echo $template_directory_uri; ?>/includes/bootstrap/css/bootstrap-responsive.css" type="text/css" />
@@ -48,7 +49,7 @@ $photographerurl = get_post_meta($post->ID, 'be_photographer_url', true);
 	
 	<div class="span7 att-info">
 		<h3 class="att-title"><?php the_title(); ?></h3>
-		<div class="att-content"><?php echo nl2br($post->post_content); ?></div>
+		<div class="att-content"><?php the_excerpt(); ?></div>
 		<?php echo do_shortcode('[social_share/]'); ?>
 	</div>
 	
@@ -65,9 +66,10 @@ $photographerurl = get_post_meta($post->ID, 'be_photographer_url', true);
 		<div class="tab-01">Dignissim facilisi ipsum ullamcorper dolore vulputate ea, suscipit eum duis delenit delenit nostrud. Esse vulputate ut aliquip at, consectetuer ut, volutpat, molestie autem ut sit lorem dolore illum ullamcorper zzril nonummy illum, duis accumsan in, augue enim tincidunt. Laoreet commodo elit amet feugiat nulla luptatum duis tincidunt nulla nulla minim velit feugait accumsan, magna minim, feugait nibh. Wisi vero erat duis ea magna eros enim exerci, vel.</div>
 		
 		<div class="tab-02">
-			<h3 class="tabHead">Vel ea hendrerit molestie</h3>
+			
 			
 			<div class="att-addinfo">
+				<?php the_content(); ?>
 				<ol>
 					<li>
 						<h6>Nulla esse suscipit luptatum</h6>
