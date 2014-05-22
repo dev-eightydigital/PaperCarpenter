@@ -27,19 +27,7 @@ $photographerurl = get_post_meta($post->ID, 'be_photographer_url', true);
 		<div class="photometa">
 			<div class="entry-attachment">
 			
-			
-			<?php $post_id = get_the_ID(); ?>
-			
-			<div class="<?php nimble_portfolio_get_item_classes($post_id); ?>">
-
-                    <?php $src = nimble_portfolio_get_attachment_src(get_post_thumbnail_id($post_id), '320x275', false); ?>
-                    <div class="nimble-portfolio-item" style="background: url('<?php echo $src[0]; ?>') center center / cover no-repeat !important; width: inherit; height: 400px;">
-                        <a href="<?php echo nimble_portfolio_get_meta('nimble-portfolio'); ?>" rel="lightbox[nimble_portfolio_gal_rect_2]">
-                            <div class="nimble-portfolio-rollerbg nimble-portfolio-rollerbg-<?php echo nimble_portfolio_get_filetype(nimble_portfolio_get_meta('nimble-portfolio'));?>"></div>
-                        </a>
-                    </div> 
-                </div>
-			
+			<?php the_content(); ?>
 			
 			</div>
 		</div>
@@ -69,7 +57,7 @@ $photographerurl = get_post_meta($post->ID, 'be_photographer_url', true);
 			
 			
 			<div class="att-addinfo">
-				<?php the_content(); ?>
+				
 				<ol>
 					<li>
 						<h6>Nulla esse suscipit luptatum</h6>
