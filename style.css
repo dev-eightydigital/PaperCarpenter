@@ -60,7 +60,7 @@ Author URI: http://www.eightydigital.com
 		#tabs li a.selected{
 			color: #aaaaaa; 
 			border-bottom: 2px solid #383838; }
-.tab-content .tabHead{
+.tab-content h3{
 	margin: 0 0 20px;
 	padding: 0;
 	width: 60%;
@@ -85,9 +85,11 @@ Author URI: http://www.eightydigital.com
 		padding: 0;
 		color: #759b12;
 		display: inline-block; }
-	.att-addinfo ol li p{
+	.att-addinfo ol li p,
+	.att-addinfo ol li li{
 		margin: 0;
-		padding: 0; 
+		padding: 0 0 0 30px; 
+		list-style: none; 
 		color: #333; }
 
 /************************************************* page styles */
@@ -194,7 +196,8 @@ ul.page-numbers{
 .gallery_imgs h3{
 	border-bottom: 1px solid #dcdcdc; 
 	padding-bottom: 5px;
-	color: #66a427; }
+	color: #66a427;
+	clear: both; }
 .gallery_imgs h3 span{
 	border-bottom: 2px solid #383838; }
 .gallery_imgs .inner-wrap{
@@ -572,7 +575,7 @@ table.shop_table { margin-bottom: 30px !important; }
 			overflow: hidden;}
 		.et_pb_blurb_content p:last-of-type { padding-bottom: 0px;}
 
-		.et_pb_main_blurb_image { text-align: center; margin-bottom: 30px; }
+		.et_pb_main_blurb_image { text-align: center; margin-bottom: 30px; height: 285px; }
 		.et_pb_blurb h4 { 
 			position: relative; 
 			text-align: center;
@@ -581,13 +584,13 @@ table.shop_table { margin-bottom: 30px !important; }
 			border-top: 1px solid #FFF;
 			color: #fff;
 			font-size: 23px;
-			font-weight: normal; 
+			font-weight: 100; 
 			animation: blurbtext 3s forwards;
 			-webkit-animation: blurbtext 3s forwards; }
 		.et_pb_blurb h4:after{
 			font-family: 'FontAwesome';
 			content: '\f18e';
-			font-weight: normal;
+			font-weight: 100;
 			padding-left: 5px; }
 		@keyframes blurbtext{
 			from { top: 0px; }
@@ -945,7 +948,16 @@ body.woocommerce div.product .woocommerce-tabs .panel, body.woocommerce #content
 
 .et_pb_section_video_bg .mejs-overlay-loading { display: none !important; }
 
-.main_title { margin-bottom: 20px; }
+.main_title { 
+	padding: 0 0 5px;
+	margin: 0 0 20px; 
+	border-bottom: 1px solid #dcdcdc; 
+	font-size: 25px;
+	font-weight: 100;}
+.main_title span{
+	border-bottom: 2px solid #383838; 
+	position: relative;
+	top: -1px; }
 
 #et-social-icons { float: right; }
 #et-social-icons li { display: inline-block; margin-left: 20px; }
@@ -976,9 +988,13 @@ body.woocommerce div.product .woocommerce-tabs .panel, body.woocommerce #content
 
 .nav li { position: relative; }
 .nav li ul { position: absolute; top: 52px; left: -27px; padding: 20px; }
+.nav li ul li{ 
+	background-image: none !important; }
+.nav li ul li a{ 
+	border-bottom: 1px solid #D7D7D7; }
 .et-fixed-header .nav li ul { top: 38px; }
 .et-fixed-header .nav li li ul { top : -3px ;}
-.nav li ul { z-index: 9999; width: 200px; background: #fff; visibility: hidden; opacity: 0; border-top: 3px solid #7EBEC5; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+.nav li ul { z-index: 9999; width: 200px; background: #EBEBEB; visibility: hidden; opacity: 0; box-shadow: 0px 0px 0px 1px #FFF inset, 0px 0px 0px 1px #D7D7D7; -moz-box-shadow: 0px 0px 0px 1px #FFF inset, 0px 0px 0px 1px #D7D7D7; -webkit-box-shadow: 0px 0px 0px 1px #FFF inset, 0px 0px 0px 1px #D7D7D7; }
 .nav li ul { -webkit-transform: translate3d(0,0,0); }
 .nav li.et-hover > ul { visibility: visible; }
 .nav li:hover > ul, .nav li.et-hover > ul { -moz-transition: opacity .2s ease-in-out; -webkit-transition: opacity .2s ease-in-out; transition: opacity .2s ease-in-out; }
@@ -1013,8 +1029,10 @@ body.woocommerce div.product .woocommerce-tabs .panel, body.woocommerce #content
 	.et-fixed-header #top-menu li.mega-menu > ul { top: 42px; }
 
 	/*---------------[MOBILE MENU]------------------*/
+	.page-id-715 .et_mobile_menu ,.page-id-2 .et_mobile_menu { top: 63px !important; }
 	.et_mobile_menu { position: absolute; left: 0; top: 215px; padding: 5%; background: #ebebeb; width: 90%; visibility: visible; opacity: 1; display: none; z-index: 9999; border-top: 3px solid #d7d7d7; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
 	.et-fixed-header .et_mobile_menu { top: 41px; }
+	.et_mobile_menu li{ list-style: none; }
 	.et_mobile_menu li ul { visibility: visible !important; display: block !important; padding-left: 10px; }
 	.et_mobile_menu li li { padding-left: 5%;}
 	.et_mobile_menu li a { border-bottom: 1px solid #d7d7d7; color: #666; padding: 10px 5%; width: 90%; display: block; }
@@ -1728,3 +1746,30 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 
 	table.cart th, #content table.cart th, table.cart td, #content table.cart td, table.cart tr, #content table.cart tr { padding: .857em 0.287em !important; }
 }
+
+
+/** Promotion Slider: plugin custom styles */
+.promo_slider .panel{
+	background: #000; /* slide background */
+	/*text-align: center; ******************/ }
+.promo_slider_thumb_nav{
+	background: none !important /* remove default background of the promotion slider */;
+	height: 75px !important; /* this is important to set the thumbnail navigation of the slider else the nav is too short*/ }
+.promo_slider img{
+	min-height: 100% !important; /* set displayed image to fit the slider */ 
+	vertical-align: baseline; }
+.promo_slider{
+	border: 1px solid #d0d0d0; /* style border on image */}
+.left_arrow, .right_arrow{ /* custom wxh of the next/prev arrow */
+	width: 21px !important; 
+	height: 75px !important; }
+.promo_slider_thumb_nav .slider_selections span{ /* custom wxh of the thumbnails */
+	width: 75px !important;
+	height: 75px !important; }
+.promo_slider_thumb_nav .thumb_nav{ /* thumbnail container */
+	height: 75px !important;
+	margin: 10px 25px 0 !important; }
+.promo_slider_thumb_nav img{ /* thumbnail override default styles */
+	width: 75px !important;
+	height: 75px; 
+	border: 1px solid #d0d0d0; }
