@@ -1751,16 +1751,15 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 /** Promotion Slider: plugin custom styles */
 .promo_slider .panel{
 	background: #000; /* slide background */
-	/*text-align: center; ******************/ }
+	text-align: center; /* center image */ }
 .promo_slider_thumb_nav{
 	background: none !important /* remove default background of the promotion slider */;
 	height: 75px !important; /* this is important to set the thumbnail navigation of the slider else the nav is too short*/ }
 .promo_slider img{
-	min-height: 100% !important; /* set displayed image to fit the slider */ 
-	vertical-align: baseline; }
+	min-height: 100% !important; /* set displayed image to fit the slider */ }
 .promo_slider{
 	border: 1px solid #d0d0d0; /* style border on image */}
-.left_arrow, .right_arrow{ /* custom wxh of the next/prev arrow */
+.left_arrow, .right_arrow{ /* cu7stom wxh of the next/prev arrow */
 	width: 21px !important; 
 	height: 75px !important; }
 .promo_slider_thumb_nav .slider_selections span{ /* custom wxh of the thumbnails */
@@ -1773,3 +1772,5 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 	width: 75px !important;
 	height: 75px; 
 	border: 1px solid #d0d0d0; }
+.promo_slider_thumb_nav .slider_selections span.current{
+	border: 1px solid #628f36 !important; }
