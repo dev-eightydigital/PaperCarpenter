@@ -7,7 +7,7 @@
 
 <?php $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 
-<div id="main-content">
+<div id="single-portfolio">
 <?php
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 $photographer = get_post_meta($post->ID, 'be_photographer_name', true);
