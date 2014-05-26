@@ -12,7 +12,7 @@ function my_fu_allowed_mime_types( $mime_types ) {
     return $mime_types;
 }
 
-add_image_size( 'PaperCarp-featimg', 252, 317, true);
+add_image_size( 'PaperCarp-featimg', 390, 380, true);
 add_image_size( 'PaperCarp-featimg-medium', 300, 250, true);
 
 //***************footer logo widget**********************
