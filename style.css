@@ -126,18 +126,18 @@ Author URI: http://www.eightydigital.com
 		width: 220px !important;
 		height: 215px !important; }
 	.centered_row .et_pb_column{
-		margin: 0 15px 50px 0; }
+		margin: 0 15px 10px 0; }
 	}
 @media screen and (max-width: 767px){
 	.centered_row {
-		width: 400px !important; }
+		width: 300px !important; }
 	.centered_row img, 
 	.centered_row .et_pb_column, 
 	.centered_row .et_pb_main_blurb_image,
 	.centered_row .et_pb_main_blurb_image img,
 	.centered_row .et_pb_blurb_content{
-		width: 400px !important;
-		height: 370px !important; }
+		width: 300px !important;
+		height: 270px !important; }
 	}
 @media screen and (max-width: 480px){
 	.centered_row {
@@ -170,6 +170,14 @@ Author URI: http://www.eightydigital.com
 	margin-bottom: 0 !important; }
 #main-content{
 	padding-top: 80px; }
+@media screen and (max-width: 980px){
+	.latest_news_row{
+		padding-top: 0 !important; }
+	}
+@media screen and (max-width: 480px){
+	#main-content{
+		padding-top: 105px; }
+	}
 	
 #single-portfolio{
 	padding-top: 110px; }
@@ -252,6 +260,9 @@ ul.page-numbers{
 		display: inline-block; 
 		margin-right: 5px; }
 /* \pagination */
+
+.latest_news_featimg{
+	text-align: center; }
 
 .post--container .title{
 	font-weight: normal; }
@@ -718,7 +729,8 @@ table.shop_table { margin-bottom: 30px !important; }
 	@media screen and (max-width: 980px){
 		.et_pb_blurb h4{
 			padding: 15px !important;
-			animation: none;
+			animation: none !important;
+			-webkit-animation: none !important;
 			top: -85px; }
 		}
 
@@ -1581,9 +1593,7 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 	.page-id-715 #et-top-navigation,
 	.page-id-2 #et-top-navigation{
 		bottom: -50px; }
-		
-	.et_pb_row{ padding-top: 60px; }
-
+	
 	.et_pb_blurb_content { text-align: center; }
 	.et_pb_space {display: none;}
 
