@@ -1097,7 +1097,8 @@ body.woocommerce div.product .woocommerce-tabs .panel, body.woocommerce #content
 	background: #f5f5f5; 
 	padding: 10px 10px 10px 20px; 
 	box-shadow:  0 0 0 1px #ffffff inset, 0 0 0 1px #d7d7d7;
-	margin-bottom: 10px; }
+	margin-bottom: 10px;
+	position: relative; }
 .page-id-715 #et-top-navigation,
 .page-id-2 #et-top-navigation{
 	bottom: -30px; 
@@ -1149,7 +1150,7 @@ body.woocommerce div.product .woocommerce-tabs .panel, body.woocommerce #content
 
 	/*---------------[MOBILE MENU]------------------*/
 	.page-id-715 .et_mobile_menu ,.page-id-2 .et_mobile_menu { top: 63px !important; }
-	.et_mobile_menu { position: absolute; left: 0; top: 215px; padding: 5%; background: #ebebeb; width: 90%; visibility: visible; opacity: 1; display: none; z-index: 9999; border-top: 3px solid #d7d7d7; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+	.et_mobile_menu { position: absolute; left: 0; top: 63px; padding: 5%; background: #ebebeb; width: 90%; visibility: visible; opacity: 1; display: none; z-index: 9999; border-top: 3px solid #d7d7d7; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
 	.et-fixed-header .et_mobile_menu { top: 41px; }
 	.et_mobile_menu li{ list-style: none; }
 	.et_mobile_menu li ul { visibility: visible !important; display: block !important; padding-left: 10px; }
@@ -1575,7 +1576,7 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 
 /*-------------------[768px]------------------*/
 @media only screen and ( max-width: 980px ) {
-	#et-top-navigation, .ib-trail{ bottom: -120px; }
+	#et-top-navigation, .ib-trail{ bottom: -50px; }
 	
 	.page-id-715 #et-top-navigation,
 	.page-id-2 #et-top-navigation{
