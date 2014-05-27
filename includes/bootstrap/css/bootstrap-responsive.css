@@ -131,16 +131,16 @@
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
-    width: 1200px;
+    width: 1024px;
   }
   .span12 {
-    width: 1200px;
+    width: 1024px;
   }
   .span11 {
-    width: 1070px;
+    width: 894px;
   }
   .span10 {
-    width: 970px;
+    width: 794px;
   }
   .span9 {
     width: 870px;
