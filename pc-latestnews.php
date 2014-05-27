@@ -10,8 +10,10 @@ get_header();
 <link rel="stylesheet" href="<?php echo $template_directory_uri; ?>/includes/bootstrap/css/bootstrap.css"  type="text/css" />
 <link rel="stylesheet" href="<?php echo $template_directory_uri; ?>/includes/bootstrap/css/bootstrap-responsive.css" type="text/css" />
 
+<div id="main-content">
+
 <div class="et_pb_section">
-			<div class="et_pb_row">
+			<div class="et_pb_row latest_news_row">
 					<?php
 						$loop = new WP_QUERY( array(
 							'post_type' => 'post',
@@ -20,7 +22,7 @@ get_header();
 						if($loop->have_posts()): while($loop->have_posts()): $loop->the_post();
 							?>
 							<div class="row-fluid post--container">
-								<div class="span3"><?php the_post_thumbnail('PaperCarp-featimg'); ?></div>
+								<div class="span3 latest_news_featimg"><?php the_post_thumbnail('PaperCarp-featimg'); ?></div>
 								<div class="span9">
 									<h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 									<div class="meta"><?php et_divi_post_meta(); ?></div>
@@ -56,6 +58,9 @@ get_header();
 	?>	
 	</center>
 </div>
+
+</div>
+
 <script src="<?php echo $template_directory_uri; ?>/includes/bootstrap/js/bootstrap.js"></script>
 <?php
 get_footer();
