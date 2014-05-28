@@ -19,7 +19,7 @@ Author URI: http://www.eightydigital.com
 	.form-interest form input[type=email],
 	.form-interest form input[type=tel],
 	.form-interest form textarea{
-		width: 350px; 
+		width: 100%; 
 		border: 1px solid #7e7e7e; 
 		border-radius: 0; }
 	.form-interest form input[type=submit]{
@@ -53,6 +53,10 @@ Author URI: http://www.eightydigital.com
 		margin-right: 10px;
 		position: relative;
 		top: -1px; }
+		@-moz-document url-prefix(){ /* FF target */
+			#tabs li{
+				padding-bottom: 7px; }
+			}
 		#tabs li a{ 
 			text-decoration: none; 
 			color: #aaaaaa; }
@@ -60,6 +64,11 @@ Author URI: http://www.eightydigital.com
 		#tabs li a.selected{
 			color: #aaaaaa; 
 			border-bottom: 2px solid #383838; }
+		@media screen and (max-width: 767px){
+			#tabs li{
+				font-size: 12px; 
+				top: 0; }
+			}
 .tab-content h3{
 	margin: 0 0 20px;
 	padding: 0;
@@ -177,6 +186,9 @@ Author URI: http://www.eightydigital.com
 @media screen and (max-width: 480px){
 	#main-content{
 		padding-top: 105px; }
+	.latest_news_row{
+		padding-top: 0 !important;
+		top: -10px; }
 	}
 	
 #single-portfolio{
@@ -1373,7 +1385,7 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 
 .et_pb_column { float: left; margin-right: 15px; }
 .et_pb_column_4_4 { width: 100%; float: none; }
-.et_pb_column_1_2 { width: 500px; }
+.et_pb_column_1_2 { width: 495px; }
 .et_pb_column_1_3 { width: 300px; }
 .et_pb_column_1_4 { width: 225px; }
 .et_pb_column_2_3 { width: 700px; }
