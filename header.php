@@ -54,6 +54,7 @@ if ( ! isset( $_SESSION ) ) session_start(); ?>
 					</a>
 			<div id="shell" class="<?= (!is_page(array(FULLSCREEN_HOMEPAGE, HOMEPAGE)))? 'wcrumbs': 'xcrumbs';?>">
 					<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+					<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" />
 					<div id="et-top-navigation">
 						<nav id="top-menu-nav">
 						<?php
