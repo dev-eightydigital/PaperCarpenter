@@ -723,10 +723,14 @@ table.shop_table { margin-bottom: 30px !important; }
 			animation: blurbtext 3s forwards;
 			-webkit-animation: blurbtext 3s forwards; }
 		.et_pb_blurb h4:after{
-			font-family: 'FontAwesome';
-			content: '\f18e';
+			font-family: 'ionicons';
+			content: '\f280';
 			font-weight: 100;
-			padding-left: 5px; }
+			padding-left: 5px;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			padding: 0px 5px;
+			margin-left: 5px; }
 		@keyframes blurbtext{
 			from { top: 0px; }
 			to { top: -105px; }
