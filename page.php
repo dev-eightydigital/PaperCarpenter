@@ -2,6 +2,7 @@
 
 get_header();
 
+
 $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 
 <div <?= (!is_page(715))? 'id="main-content"': '' ?>>
@@ -12,6 +13,8 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 		<div id="content-area" class="clearfix">
 			<div id="left-area">
 
+<?php else: ?>
+			<div class="et_pb_row">
 <?php endif; ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -65,7 +68,8 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 			<?php get_sidebar(); ?>
 		</div> <!-- #content-area -->
 	</div> <!-- .container -->
-
+<?php else: ?>
+			</div>
 <?php endif; ?>
 
 </div> <!-- #main-content -->
