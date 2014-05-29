@@ -1,5 +1,20 @@
 <?php
 
+add_filter('upload_mimes', 'custom_upload_mimes');
+function custom_upload_mimes ( $existing_mimes=array() ) {
+ // add your extension to the array
+ $existing_mimes['psd'] = 'application/x-psd';
+  $existing_mimes['ai'] = 'application/x-ai';
+ // add as many as you like
+ // removing existing file types
+ unset( $existing_mimes['exe'] );
+ // add as many as you like
+ // and return the new full result
+ return $existing_mimes;
+}
+
+
+/*
 add_filter( 'fu_allowed_mime_types', 'my_fu_allowed_mime_types' );
 function my_fu_allowed_mime_types( $mime_types ) {
     // Array keys should be unique
@@ -10,7 +25,8 @@ function my_fu_allowed_mime_types( $mime_types ) {
     // Include the rest allowed files
 
     return $mime_types;
-}
+}*/
+
 
 add_image_size( 'PaperCarp-featimg', 390, 380, true);
 add_image_size( 'PaperCarp-featimg-medium', 300, 250, true);
