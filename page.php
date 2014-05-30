@@ -5,7 +5,7 @@ get_header();
 
 $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 
-<div <?= (!is_page(715))? 'id="main-content"': '' ?>>
+<div <?= (!is_page(HOMEPAGE))? 'id="main-content"': '' ?>>
 
 <?php if ( ! $is_page_builder_used ) : ?>
 
@@ -14,7 +14,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 			<div id="left-area">
 
 <?php else: ?>
-			<div <?= (!is_page(715))? 'class="et_pb_row"': '' ?>>
+			<div <?= (!is_page(HOMEPAGE))? 'class="et_pb_row"': '' ?>>
 <?php endif; ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -66,9 +66,11 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 			</div> <!-- #left-area -->
 
 			<?php get_sidebar(); ?>
+			<div class="clear"></div>
 		</div> <!-- #content-area -->
 	</div> <!-- .container -->
 <?php else: ?>
+			<div class="clear"></div>
 			</div>
 <?php endif; ?>
 
