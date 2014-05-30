@@ -14,7 +14,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 			<div id="left-area">
 
 <?php else: ?>
-			<div class="et_pb_row">
+			<div <?= (!is_page(715))? 'class="et_pb_row"': '' ?>>
 <?php endif; ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
