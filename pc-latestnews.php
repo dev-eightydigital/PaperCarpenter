@@ -17,7 +17,8 @@ get_header();
 					<?php
 						$loop = new WP_QUERY( array(
 							'post_type' => 'post',
-							'paged' => $paged
+							'paged' => $paged,
+							'cat' => -FRONTEND_UPLOADS_CAT //exclude posts with category from frontend posts
 						) );
 						if($loop->have_posts()): while($loop->have_posts()): $loop->the_post();
 							?>
