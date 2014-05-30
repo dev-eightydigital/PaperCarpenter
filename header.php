@@ -1,6 +1,4 @@
 <?php 
-define('HOMEPAGE', 715);
-define('FULLSCREEN_HOMEPAGE', 763);
 if ( ! isset( $_SESSION ) ) session_start(); ?>
 <!DOCTYPE html>
 <!--[if IE 6]>
