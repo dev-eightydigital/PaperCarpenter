@@ -1,4 +1,7 @@
 <?php
+define('HOMEPAGE', 715);
+define('FULLSCREEN_HOMEPAGE', 763);
+define('FRONTEND_UPLOADS_CAT', 231);//category id of the posts, on this case that is from the frontend uploads
 
 add_filter('upload_mimes', 'custom_upload_mimes');
 function custom_upload_mimes ( $existing_mimes=array() ) {
