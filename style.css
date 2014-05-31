@@ -6,6 +6,27 @@ Description: Responsive design for Paper Carpenter
 Author: EightyDigital Pte. Ltd.
 Author URI: http://www.eightydigital.com
 */
+
+code{
+	display: block;
+	white-space: normal !important; }
+#sidebar{
+	border-left: 1px solid #e2e2e2; 
+	padding-top: 20px; }
+#sidebar li{
+	list-style: none; }
+#sidebar li:before{
+	font-family: 'ionicons';
+	content: '\f215';
+	padding-right: 15px;
+	font-size: 9px;
+	color: #7cc68d; }
+.ion-share:before{
+	font-size: 20px;
+	color: #333; }
+.ion-share:hover:before{
+	color: #5fab0d; }
+
 /** form-review : attachment page */
 .form-interest form{
 	margin: 0;
@@ -64,6 +85,9 @@ Author URI: http://www.eightydigital.com
 		#tabs li a.selected{
 			color: #aaaaaa; 
 			border-bottom: 2px solid #383838; }
+
+#tabs li, #tabs li a{
+	float: none !important; }
 		@media screen and (max-width: 767px){
 			#tabs li{
 				font-size: 12px; 
@@ -160,8 +184,6 @@ Author URI: http://www.eightydigital.com
 		height: 250px !important; }
 	}
 @media screen and (max-width: 360px){
-	.centered_row{
-		width: 360px !important; }
 	.centered_row img, 
 	.centered_row .et_pb_column, 
 	.centered_row .et_pb_main_blurb_image,
@@ -170,15 +192,12 @@ Author URI: http://www.eightydigital.com
 		width: 280px !important;
 		height: 250px !important; }
 	}	
-@media screen and (max-width: 320px){
-	.centered_row{
-		width: 320px !important; }
-	}
+
 	
 .notext{
 	margin-bottom: 0 !important; }
 #main-content{
-	padding-top: 80px; }
+	padding-top: 85px; }
 @media screen and (max-width: 980px){
 	.latest_news_row{
 		padding-top: 0 !important; }
@@ -206,6 +225,7 @@ Author URI: http://www.eightydigital.com
 	vertical-align: bottom;
 	color: #66a327; }
 
+.pbbox2 label, 
 .pbbox2 h3{
 	font-size: 18px;
 	vertical-align: bottom;
@@ -344,12 +364,19 @@ ul.page-numbers{
 
 .wpcf7-text, .wpcf7-textarea{
 	border: 1px solid #ccc; }
-
+.ugc-inner-wrapper .ugc-input-wrapper input[type=submit],
 p input[type="submit"]{
 	background: #628f36;
 	color: #fff;
 	border: none;
+	padding: 5px;
+	margin: 5px 0; }
+.post-password-form{ 
+	text-align: center; }
+.post-password-form input[type=password]{
 	padding: 5px; }
+.post-password-form input[type=submit]{
+	width: 150px; }
 
 .clear{ clear: both; }
 
@@ -583,7 +610,7 @@ h4 { font-size: 18px; }
 h5 { font-size: 16px; }
 h6 { font-size: 14px; }
 p { padding-bottom: 1em; line-height: 1.7em; }
-p:last-of-type { padding-bottom: 0; }
+p:last-of-type { padding-bottom: 10px; }
 strong { font-weight: bold; }
 cite, em, i { font-style: italic; }
 pre, code { font-family: Courier New, monospace; margin-bottom: 10px; }
@@ -947,10 +974,10 @@ table.shop_table { margin-bottom: 30px !important; }
 .et_pb_column_1_3 .et_pb_slider:hover .et-pb-arrow-prev, .et_pb_column_1_4 .et_pb_slider:hover .et-pb-arrow-prev { left: 0px; }
 .et_pb_column_1_3 .et_pb_slider:hover .et-pb-arrow-next, .et_pb_column_1_4 .et_pb_slider:hover .et-pb-arrow-prev { right: 0px; }
 
-.et_right_sidebar #left-area { float: left; width: 795px; margin-right: 60px; }
+.et_right_sidebar #left-area { float: left; width: 795px;}
 .et_right_sidebar #sidebar { float: right; width: 224px; }
 	#sidebar .et_pb_widget { float: none; margin: 0 0 30px 30px; }
-#main-content .container { padding-top: 58px; margin-top: 100px; }
+
 	#main-content .container:before { content: ''; position: absolute; top: 0; height: 100%; width: 1px; background-color: #e2e2e2; }
 
 	.et_right_sidebar #main-content .container:before { right: 224px; }
@@ -959,7 +986,7 @@ table.shop_table { margin-bottom: 30px !important; }
 	.et_full_width_page #main-content .container:before, .et_full_width_portfolio_page #main-content .container:before { display: none; }
 
 	.et_full_width_page #left-area { float: none; width: 100%; }
-	#left-area { padding-bottom: 23px; }
+	#left-area { padding-bottom: 23px; padding-top: 20px; }
 		#left-area .post-meta { font-size: 14px; padding-bottom: 15px; }
 			#left-area .post-meta a { text-decoration: none; color: #666; }
 		#left-area .et_featured_image { padding-bottom: 7px; }
@@ -1293,7 +1320,7 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 
 
 .et_pb_slider { position: relative; }
-.et_pb_slides:after, .et_pb_row:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.et_pb_slides:after, .et_pb_row:after { content: ""; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 .et_pb_slider .et_pb_slide { display: none; float: left; margin-right: -100%; position: relative; width: 100%; text-align: center; }
 .et_pb_slider .et_pb_slide, .et_pb_section { background-position: center; background-repeat: no-repeat; -webkit-background-size: 100%; -moz-background-size: 100%; background-size: 100%; -moz-background-size: cover; -webkit-background-size: cover; background-size: cover; }
 .et_pb_slider .et_pb_slide:first-child { display: list-item; }
@@ -1919,3 +1946,54 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 	border: 1px solid #d0d0d0; }
 .promo_slider_thumb_nav .slider_selections span.current{
 	border: 1px solid #628f36 !important; }
+
+/** Front-End Publishing plugin style */
+#new-post-form #post_title, #new-post-form #post_tags, #new-post-form #post_category, #new-post-form #about_the_author{
+	border-radius: 0;
+	margin: 0 0 20px 0;
+	box-shadow: none;
+	padding: 5px;
+	position: relative;
+	z-index: 5; }
+	#new-post-form #post_title{
+		font-size: 20px; }
+#new-post-form label{
+	clear: both;
+	font-size: 18px;
+	vertical-align: bottom;
+	font-weight: 100; 
+	color: #648d3a;
+	display: block;
+	margin: 0 0 10px 0;
+	padding: 0; }
+#new-post-form label:after{
+	font-family: 'ionicons';
+	content: '\f280';
+	font-weight: 100;
+	padding-left: 5px;
+	padding: 0px 5px;
+	margin-left: 5px; }
+#new-post-form br{
+	display: none; }
+.mceIframeContainer{
+	padding: 0 !important; }
+#new-post-form input[type=text],
+#new-post-form input[type=submit]{
+	clear: both;
+	float: left; }
+#new-post-form button#submit{
+	clear: both;
+	float: left;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 6; 
+	
+	background: none repeat scroll 0% 0% #628F36;
+	color: #FFF;
+	border: medium none;
+	padding: 5px 30px;
+	margin: 5px 0px;
+	border-radius: 0; }
+.wpcf7-form input[type=submit]:hover,
+#new-post-form button#submit:hover{
+	box-shadow:  0 0 0 1px #ffffff inset, 0 0 0 1px #d7d7d7; }
