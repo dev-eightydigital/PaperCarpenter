@@ -62,7 +62,6 @@ get_header();
 
 </div>
 
-<script src="<?php echo $template_directory_uri; ?>/includes/bootstrap/js/bootstrap.js"></script>
 <?php
 get_footer();
 ?>
